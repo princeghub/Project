@@ -1,0 +1,98 @@
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    background: #34495e;
+    color: #fff;
+    width: 500px;
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem;
+}
+.root{
+    height: 500px;
+    width: 500px;
+    background: #9c0404;
+}
+button{
+    padding: .7rem 9.5rem;
+    background: #34495e;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: .5rem;
+    border: none;
+    border-radius: 10px;
+
+}
+#code{
+    font-size: 2rem;
+    color: #acaaaa;
+    margin: 1rem 1rem;
+    display: inline-block;
+    width: 12vw;
+    outline: unset;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.69);
+                
+}
+#copybtn{
+    padding: .2rem .3rem;
+    border: none;
+    outline: unset;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: -20px;
+    background: #34495e;
+}
+
+.toast-massage{
+    position: fixed;
+    top: -1rem;
+    left: 1rem;
+    height: 5vh;
+    width: 12.4vw;
+    background: #02f7ad;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    border: 1px solid #000;
+    box-shadow: -1px -1px 26px 4px rgba(0,0,0,0.38);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 5vh;
+
+}
+
+.toast-msg-in{
+    animation: msgin .5s ease-in-out;
+}
+
+.toast-msg-out{
+    animation: msgout .5s ease-in-out;
+}
+
+@keyframes msgin{
+    from{
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes msgout{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+}
