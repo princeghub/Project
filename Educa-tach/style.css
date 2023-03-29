@@ -1,0 +1,436 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--black-color);
+    overflow-x: hidden;
+}
+
+:root {
+    --black-color: #130f40;
+    --primery-color: #57E4A7;
+    --sceondery-color: #D6F7E7;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primery-color);
+    height: 2rem;
+}
+
+section {
+    height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+
+
+/* =========================== Header CSS Start ======================= */
+.header {
+    height: 100px;
+    width: 100vw;
+    padding: 0 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+}
+
+.logo a {
+    font-size: 3rem;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.logo a span {
+    display: inline-block;
+    background: var(--primery-color);
+    padding: .5rem 1rem;
+    color: var(--black-color);
+}
+
+nav .nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav .nav-bar a {
+    color: var(--primery-color);
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+
+}
+nav .nav-bar a:hover{
+    color: var(--sceondery-color);
+}
+nav .nav-bar .contact-btn{
+    padding: 1rem 3rem;
+    background: var(--primery-color);
+    color: var(--sceondery-color);
+    transition: all .5s ease-in-out;
+    display: inline-block;
+    width: 185px;
+    height: inherit;
+}
+nav .nav-bar .contact-btn:hover{
+    background: transparent;
+    border: 1px solid var(--primery-color);
+    color: var(--primery-color);
+    transform: translateY(-5px);
+}
+.manu-icon{
+    display: none;
+}
+.manu-icon .fa-bars{
+    font-size: 3rem;
+    color: var(--primery-color);
+    display: none;
+}
+
+.manu-icon .fa-xmark{
+    display: none;
+}
+
+.fixd{
+    position: fixed;
+    left: 0;right: 0;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    background: var(--black-color);
+    height: 70px;
+}
+
+
+/* ========================= Heder Responsive CSS Code ============================ */
+/* @media (max-width:1024px){
+    .header{
+        width: 100vw;
+    }
+} */
+@media (max-width:992px){
+    html{
+        font-size: 55%;
+    }
+    
+}
+
+@media(max-width:768px){
+    .header{
+        padding: 0 3rem;
+    }
+    nav .nav-bar{
+        flex-direction: column;
+        position: absolute;
+        top: 90%;right: 0;
+        width: 40vw;
+        height: inherit;
+        background: var(--black-color);
+        gap: 0;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+        opacity: 0;
+        
+    }
+    .active .nav-bar{
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+    .manu-icon{
+        display: block;
+    }
+
+    
+    nav .nav-bar a{
+        padding: 2rem 0;
+        display: block;
+
+    }
+
+    .active .manu-icon .fa-xmark{
+        display: block;
+        font-size: 3rem;
+        color: var(--primery-color);
+    }
+    .active .manu-icon .fa-bars{
+        display: none;
+    }
+
+    .manu-icon .fa-bars{
+        display: block;
+    }
+}
+
+
+/*===================== Hero Sectione CSS start =========================*/
+
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#home .left-side h5{
+    font-size: 2rem;
+    color: var(--sceondery-color);
+    text-transform: uppercase;
+    line-height: 2rem;
+}
+#home .left-side h1{
+    font-size: 5rem;
+    color: var(--primery-color);
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+#home .left-side p{
+    color: var(--sceondery-color);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    width: 70%;
+    line-height: 2.2rem;
+}
+.hero-btn a{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 3rem;
+    background: var(--primery-color);
+    padding: 1rem 4rem;
+    display: inline-block;
+    margin-top: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+    
+}
+.hero-btn a:hover{
+    background: var(--sceondery-color);
+    transform: translateY(-5px);
+}
+
+
+/* ========================= Hero Responsive CSS Code ======================= */
+
+@media(max-width:768px){
+    html{
+        font-size: 52%;
+    }
+    #home{
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 0;
+        height: inherit;
+    }
+    #home .left-side{
+        padding: 5rem 0;
+        text-align: center;
+    }
+    #home .left-side p{
+        width: inherit;
+    }
+}
+
+/* ================= Card Section CSS Code ======================== */
+
+.card-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    height: inherit;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.card-section img{
+    width: 80px;
+    margin-right: 1rem;
+}
+.card-section .card-1{
+    background: var(--sceondery-color);
+    padding: 2rem;
+    transition:all .5s ease-in-out;
+    cursor: pointer;
+
+}
+.card-section .card-1:hover{
+    background: var(--primery-color);
+    transform: translateY(-5px);
+}
+.card-section .card-1:hover h3, p{
+    color: var(--sceondery-color);
+}
+.card-1 h3{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    color: var(--black-color);
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+}
+.card-1 p{
+    font-size: 2rem;
+    list-style: 5px;
+    line-height: 2rem;
+    color: var(--black-color);
+    margin-top: 1.5rem;
+    transition: all .5s ease-in-out;
+}
+
+
+
+#aboutus{
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+#aboutus .image-side img{
+    display: none;
+}
+#aboutus .image-side{
+    width: 50vw;
+    height: inherit;
+    background: url(./assits/aboutus.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#aboutus .content-side{
+    background: var(--sceondery-color);
+    width: 50vw;
+    padding: 2rem;
+}
+#aboutus .content-side h5{
+    color: var(--primery-color);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+#aboutus .content-side h2{
+    color: var(--black-color);
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+#aboutus .content-side .valuable{
+    background: var(--primery-color);
+    width: 40vw;
+    height: inherit;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    transition: all .5s ease-in-out;
+}
+
+#aboutus .content-side .valuable:hover{
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.23), -5px -5px 10px 2px rgba(0,0,0,0.23);
+}
+
+.valuable h3{
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 4rem;
+    display: flex;
+    align-items: center;
+    color: var(--sceondery-color);
+}
+.valuable h3 img{
+    width: 50px;
+    margin-right: 1rem;
+}
+.valuable p{
+    color: var(--black-color);
+    font-size: 1.5rem;
+    list-style: 5px;
+}
+
+#aboutus .content-side .expertis{
+    background: #fff;
+    width: 40vw;
+    height: inherit;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    transition: all .5s ease-in-out;
+}
+#aboutus .content-side .expertis:hover{
+    background: var(--primery-color);
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.23), -5px -5px 10px 2px rgba(0,0,0,0.23);
+}
+.expertis h3{
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 4rem;
+    display: flex;
+    align-items: center;
+    color: var(--primery-color);
+    transition: all .5s ease-in-out;
+}
+#aboutus .content-side .expertis:hover h3{
+    color: var(--sceondery-color);
+}
+.expertis h3 img{
+    width: 50px;
+    margin-right: 1rem;
+}
+.expertis p{
+    color: var(--black-color);
+    font-size: 1.5rem;
+    list-style: 5px;
+}
+
+
+/* ==========================About Us Responsive Code ======================= */
+
+@media(max-width:667px){
+    #aboutus{
+        display: flex;
+        flex-direction: column;
+        order: 1;
+        height: inherit;
+    }
+    #aboutus .image-side img{
+        display: block;
+    }
+    #aboutus .image-side{
+        width: 90vw;
+        background: url(./assits/aboutus.jpg) no-repeat center !important;
+        z-index: 1;
+
+    }
+    #aboutus .content-side{
+        width: 90vw;
+    }
+    #aboutus .content-side .valuable{
+        width: 80vw;
+    }
+    #aboutus .content-side .expertis{
+        
+        width: 80vw;
+        
+    }
+}
+
+
