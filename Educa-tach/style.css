@@ -38,10 +38,51 @@ section {
     height: 100vh;
     width: 90vw;
     margin: 0 auto;
+    background: var(--sceondery-color);
 }
 img{
     width: 100%;
 }
+h5{
+    color: var(--primery-color);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+p{
+    color: var(--sceondery-color);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    width: 70%;
+    line-height: 2.2rem;
+}
+
+h3{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    color: var(--black-color);
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+    line-height: 5rem;
+}
+
+button{
+    padding: 1.5rem 3rem;
+    background: var(--sceondery-color);
+    font-size: 2rem;
+    margin-top: 2rem;
+    border: none;
+    color: var(--black-color);
+    transition: all .5s ease-in-out;
+    display: inline-block;
+    height: 50px;
+    cursor: pointer;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+
 
 
 /* =========================== Header CSS Start ======================= */
@@ -125,6 +166,11 @@ nav .nav-bar .contact-btn:hover{
     background: var(--black-color);
     height: 70px;
 }
+h2{
+    color: var(--black-color);
+    font-size: 4rem;
+    margin: 2rem 0;
+}
 
 
 /* ========================= Heder Responsive CSS Code ============================ */
@@ -149,7 +195,7 @@ nav .nav-bar .contact-btn:hover{
         position: absolute;
         top: 90%;right: 0;
         width: 40vw;
-        height: inherit;
+        min-height: 40vh;
         background: var(--black-color);
         gap: 0;
         transform: translateX(100%);
@@ -185,6 +231,30 @@ nav .nav-bar .contact-btn:hover{
         display: block;
     }
 }
+@media(max-width:736px){
+    nav .nav-bar{
+        width: 50vw;
+        min-height: 300px;
+        
+        
+    }
+}
+@media(max-width:568px){
+    nav .nav-bar{
+        width: 50vw;
+        min-height: 350px;
+        
+        
+    }
+}
+@media(max-width:550px){
+    nav .nav-bar{
+        width: 50vw;
+        min-height: 50vh;
+        
+        
+    }
+}
 
 
 /*===================== Hero Sectione CSS start =========================*/
@@ -194,6 +264,7 @@ nav .nav-bar .contact-btn:hover{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: transparent;
 }
 
 #home .left-side h5{
@@ -263,6 +334,7 @@ nav .nav-bar .contact-btn:hover{
     height: inherit;
     gap: 2rem;
     padding: 2rem 0;
+    background: transparent;
 }
 .card-section img{
     width: 80px;
@@ -288,7 +360,7 @@ nav .nav-bar .contact-btn:hover{
     align-items: center;
     font-weight: 800;
     color: var(--black-color);
-    transition: all .5s ease-in-out;
+    /* transition: all .5s ease-in-out; */
     text-transform: uppercase;
 }
 .card-1 p{
@@ -297,7 +369,8 @@ nav .nav-bar .contact-btn:hover{
     line-height: 2rem;
     color: var(--black-color);
     margin-top: 1.5rem;
-    transition: all .5s ease-in-out;
+    width: 100%;
+    /* transition: all .5s ease-in-out; */
 }
 
 
@@ -377,7 +450,7 @@ nav .nav-bar .contact-btn:hover{
 }
 #aboutus .content-side .expertis:hover{
     background: var(--primery-color);
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.23), -5px -5px 10px 2px rgba(0,0,0,0.23);
+    box-shadow: 5px 5px 10px 2px rgba(54, 54, 54, 0.18), -5px -5px 10px 2px rgba(54, 54, 54, 0.18);
 }
 .expertis h3{
     font-size: 2.5rem;
@@ -426,11 +499,493 @@ nav .nav-bar .contact-btn:hover{
     #aboutus .content-side .valuable{
         width: 80vw;
     }
-    #aboutus .content-side .expertis{
+    #aboutus .content-side .expertis{ 
+        width: 80vw;        
+    }
+}
+
+
+
+/* =======================Courses Section CSS Code =================================== */
+
+
+#courses{
+    background: var(--sceondery-color);
+    margin-top: 4rem;
+    padding: 3rem;
+    height: inherit;
+}
+.course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    gap: 2rem;
+}
+
+.course-box h3{
+    margin-top: 2rem;
+}
+.course-box p{
+    margin-top: 2.5rem;
+    width: 100%;
+}
+.course-box h3 img{
+    width: 50px;
+    margin-right: 1rem;
+}
+.course-box .box{
+    min-height: 450px;
+    background: var(--primery-color);
+    padding: 2rem;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+.course-box .box:hover{
+    box-shadow: 5px 5px 10px 2px rgba(54, 54, 54, 0.18), -5px -5px 10px 2px rgba(54, 54, 54, 0.18);
+}
+.course-box .box .overlay{
+    height: 100%;
+    width: 100%;
+    background: rgba(3, 189, 111, 0.836);
+    position: absolute;
+    top: 100%;left: 0;
+    transition: all .5s ease-in-out;
+    padding: 2rem;
+    
+}
+.overlay .icon{
+    font-size: 3rem;
+    position: relative;
+    right: -90%;
+    top: 0;
+    display: inline-block;
+    color: var(--sceondery-color);
+}
+.overlay p{
+    color: var(--sceondery-color);
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+.cover .overlay{
+    transform: translateY(-100%);
+}
+.course-box .box .box-img{
+    height: 200px;
+    width: 350px;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.course-box .box .box-img:hover img{
+    transform: scale(1.1);
+}
+.course-box .box .box-img img{
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+/* ==================== Course Section Responsive Code ======================== */
+
+@media(max-width:920px){
+    .course-box .box .box-img{
+        width: 300px;
+       
+    }
+}
+@media(max-width:855px){
+    .course-box .box .box-img{
+        height: 300px;
+        width: 550px;
+       
+    }
+}
+@media(max-width:768px){
+    .course-box .box .box-img{
+        height: 300px;
+        width: 500px;
+       
+    }
+}
+
+@media(max-width:568px){
+    .course-box .box .box-img{
+        height: 200px;
+        width: 290px;
+       
+    }
+
+    .course-box{
+
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    
+    }
+}
+
+@media(max-width:375px){
+    .course-box .box .box-img{
+        height: 200px;
+        width: 250px;
+       
+    }
+
+    .course-box{
+
+        grid-template-columns: repeat(auto-fill, minmax(290px,1fr));
+    
+    }
+}
+
+/* ======================== Teacher Section CSS Code ==================== */
+
+#teacher{
+    background: var(--sceondery-color);
+    padding: 5rem 2rem;
+    position: relative;
+    margin-top: 4rem;
+    height: 600px;
+    cursor: pointer;
+    
+}
+#teacher h3{
+    line-height: 7rem;
+}
+#teacher .slider-container{
+    width: 80vw;
+    height: 400px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+    margin: 0 auto;
+}
+.slider-container::-webkit-scrollbar{
+    display: none;
+}
+.slider{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 2rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+    
+}
+
+.control #next{
+    position: absolute;
+    top: 43%;
+    right: 10px;
+    background: var(--primery-color);
+    font-size: 4rem;
+    height: 70px;
+}
+.control #prev{
+    position: absolute;
+    top: 43%;
+    left: 10px;
+    background: var(--primery-color);
+    font-size: 4rem;
+    height: 70px;
+}
+.slider .items{
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    background: linear-gradient(175deg, var(--sceondery-color) 0%, var(--primery-color) 100%);
+    border: 1px solid var(--black-color);
+    padding: 2rem;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+.slider .items h3{
+    display: inline-block;
+    text-align: center;
+}
+.slider .items h5{
+    color: var(--black-color);
+}
+.slider .items img{
+    width: 100%;
+}
+
+
+/* =================  Teacher Section Responsive Code ==================== */
+
+@media(max-width:768px){
+    .control #next{
+        padding: 1rem 2rem;
+    }
+    .control #prev{
+       padding: 1rem 2rem;
+    }
+}
+@media(max-width:667px){
+    .control #next{
+        padding: 0.8rem 1.5rem;
+        font-size: 3rem;
+        height: 50px;
+    }
+    .control #prev{
+        padding: 0.8rem 1.5rem;
+        font-size: 3rem;
+        height: 50px;
+    }
+}
+
+/* =================  Pricing Section CSS Code ==================== */
+
+#pricing{
+    padding: 3rem;
+    margin-top: 4rem;
+    height: inherit;
+}
+
+.price-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.price-box .box{
+    background: var(--primery-color);
+    display: inline-block;
+    min-height: 70vh;
+    padding: 3rem;
+    transition: all .5s ease-in-out;
+}
+.price-box .box:hover{
+    transform: translateY(-7px);
+    box-shadow: 5px 5px 10px 2px rgba(54, 54, 54, 0.18), -5px -5px 10px 2px rgba(54, 54, 54, 0.18);
+}
+.price-box .box h5{
+    color: var(--black-color);
+}
+.price-box .box h1{
+    font-size: 10rem;
+    color: var(--sceondery-color);
+}
+.price-box .box h1 span{
+    font-size: 4rem;
+    color: #dadada;
+}
+.price-box .box p{
+    width: 100%;
+}
+.price-box .box .pricebtn{
+    margin-top: 4rem;
+    display: inline-block;
+}
+
+
+
+/* ======================= Pricing Responsive Code ==================== */
+@media(max-width:768px){
+    .price-box .box{
+        min-height: 45vh;
+    }
+}
+/* ======================= Testimonial Section ==================== */
+
+#testimonial{
+    padding: 2rem;
+    margin-top: 4rem;
+    height: inherit;
+    cursor: pointer;
+}
+#testimonial h3{
+    line-height: 7rem;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--primery-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .content{
+    padding: 3rem;
+    width: 100%;
+}
+.swiper-slide .content .coment{
+    background: var(--sceondery-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.swiper-slide .content .coment p{
+    width: 100%;
+    /* height: 150px; */
+    text-align: left;
+    color: var(--black-color);
+    position: relative;
+}
+.swiper-slide .content .coment p span{
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.swiper-slide .content .cmnt-img{
+    text-align: center;
+    margin-top: 2rem;
+}
+.swiper-slide .content .cmnt-img figure{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    
+}
+.swiper-slide .content .cmnt-img figure img{
+    width: 100%;
+    border-radius: 50%;
+}
+.swiper-slide .content .cmnt-img h5{
+    color: var(--black-color);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ====================== Contact Section CSS Code ===================== */
+
+#contact-form{
+    padding: 2rem;
+    margin-top: 4rem;
+    height: inherit;
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    
+}
+.contact .left-form{
+    background: var(--primery-color);
+    height: 550px;
+    /* width: 45vw; */
+    padding: 3rem;
+}
+
+.contact .map{
+    background: var(--primery-color);
+    height: 550px;
+    width: 100%;
+    padding: 3rem;
+}
+/* .contact map iframe{} */
+.form-group{
+    margin: 2rem 0;
+}
+.form-group label{
+    font-size: 3rem;
+    color: var(--black-color);
+}
+.form-group #email, #name{
+    height: 40px;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    outline: unset;
+    border: none;
+    background: var(--sceondery-color);
+}
+.form-group #message{
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    font-size: 2rem;
+    outline: unset;
+    border: none;
+    color: var(--black-color);
+    overflow-y: scroll;
+    background: var(--sceondery-color);
+}
+
+/* ======================== Contact Responsive Code ======================== */
+
+@media(max-width:568px){
+    .contact{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         
-        width: 80vw;
         
     }
 }
 
 
+
+/* =====================Footer Section====================== */
+
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;justify-content: space-between;
+    padding: 0 9rem;
+    align-items: center;
+    background: #0c0a29;
+    margin-top: 4rem;
+}
+footer .copy{
+    width: 40vw;
+}
+footer .copy p{
+    color: var(--primery-color);
+    font-size: 2rem;
+}
+
+/* footer .social{} */
+footer .social ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+/* footer .social ul li{} */
+footer .social ul li a{
+    text-decoration: none;
+    font-size: 4rem;
+    color: var(--primery-color);
+    transition: all .5s ease-in-out;
+    display: inline-block;
+}
+footer .social ul li a:hover{
+    color: var(--sceondery-color);
+}
+
+/* ======================Footer Responsive Code=================== */
+
+@media(max-width:768px){
+    footer .copy{
+        width: 70vw;
+    }
+}
+@media(max-width:667px){
+    footer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        row-gap: 1rem;
+    }
+    footer .copy{
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+    footer .copy p{
+        text-align: center;
+        display: inline-block;
+    }
+}
+@media(max-width:568px){
+    footer{
+        padding: 0 1rem;
+    }
+}

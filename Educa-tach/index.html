@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="style.css">
     <!-- =====================Font Awesome==================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- =====================Swiper CDN====================== -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- ===================== JS AOS CDN Link ================-->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -27,10 +35,10 @@
         <nav>
             <ul class="nav-bar">
                 <li><a href="#home">home</a></li>
-                <li><a href="#home">course</a></li>
-                <li><a href="#home">Teachers</a></li>
+                <li><a href="#courses">course</a></li>
+                <li><a href="#teacher">Teachers</a></li>
                 <li><a href="#aboutus">about us</a></li>
-                <li><a href="#contact us" class="contact-btn">contact us</a></li>
+                <li><a href="#contact-form" class="contact-btn">contact us</a></li>
             </ul>
         </nav>
         <div class="manu-icon">
@@ -45,7 +53,8 @@
         <div class="left-side">
             <h5>welcome to educa.tech</h5>
             <h1>Best online education site</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas neque facilis voluptatum nesciunt eligendi impedit consequatur doloremque nulla repudiandae obcaecati corrupti.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas neque facilis voluptatum nesciunt
+                eligendi impedit consequatur doloremque nulla repudiandae obcaecati corrupti.</p>
             <div class="hero-btn">
                 <a href="#">Get Start</a>
             </div>
@@ -81,7 +90,7 @@
 
     <!-- ======================================= About Us ============================= -->
 
-    <section id="aboutus">
+    <section id="aboutus" data-aos="fade-up">
         <div class="image-side">
             <img src="./assits/aboutus.jpg" alt="">
         </div>
@@ -108,13 +117,504 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem, sit modi sint eos consequatur?
                 </p>
             </div>
-            </div>
-            
+        </div>
+
         </div>
     </section>
 
 
     <!-- ============================= Courses Section Start =========================== -->
+
+    <Section id="courses" data-aos="fade-up">
+        <h5>Our Courses</h5>
+        <h2>Develope Your Skill With Us</h2>
+        <div class="course-box">
+
+            <div class="box box-1">
+                <div class="overlay">
+                    <span class="icon"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>More About This Course</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestiae ad facilis aliquam
+                        veniam possimus omnis, fuga rerum similique illum, enim quia ut cupiditate dolorem quisquam odio
+                        architecto sit quidem!
+                    </p>
+                </div>
+                <div class="box-img"><img src="./assits/box img.jpg" alt="Image"></div>
+                <h3> <img src="./assits/deep-learning.png" alt=""> Machine Learning</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatum architecto quo dolor,
+                    nam eaque.
+                </p>
+                <button id="infoBnt1">Know More</button>
+
+            </div>
+
+            <div class="box box-2">
+
+                <div class="overlay">
+                    <span class="icon-2  icon"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>More About This Course</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestiae ad facilis aliquam
+                        veniam possimus omnis, fuga rerum similique illum, enim quia ut cupiditate dolorem quisquam odio
+                        architecto sit quidem!
+                    </p>
+                </div>
+
+                <div class="box-img"><img src="./assits/box img.jpg" alt="Image"></div>
+                <h3> <img src="./assits/deep-learning.png" alt=""> Machine Learning</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatum architecto quo dolor,
+                    nam eaque.
+                </p>
+                <button id="infoBnt2">Know More</button>
+
+            </div>
+
+            <div class="box box-3">
+
+                <div class="overlay">
+                    <span class="icon-3 icon"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>More About This Course</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestiae ad facilis aliquam
+                        veniam possimus omnis, fuga rerum similique illum, enim quia ut cupiditate dolorem quisquam odio
+                        architecto sit quidem!
+                    </p>
+                </div>
+
+                <div class="box-img"><img src="./assits/box img.jpg" alt="Image"></div>
+                <h3> <img src="./assits/deep-learning.png" alt=""> Machine Learning</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatum architecto quo dolor,
+                    nam eaque.
+                </p>
+                <button id="infoBnt3">Know More</button>
+
+            </div>
+
+            <div class="box box-4">
+
+                <div class="overlay">
+                    <span class="icon-4 icon"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>More About This Course</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestiae ad facilis aliquam
+                        veniam possimus omnis, fuga rerum similique illum, enim quia ut cupiditate dolorem quisquam odio
+                        architecto sit quidem!
+                    </p>
+                </div>
+
+                <div class="box-img"><img src="./assits/box img.jpg" alt="Image"></div>
+                <h3> <img src="./assits/deep-learning.png" alt=""> Machine Learning</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatum architecto quo dolor,
+                    nam eaque.
+                </p>
+                <button id="infoBnt4">Know More</button>
+
+            </div>
+
+            <div class="box box-5">
+
+                <div class="overlay">
+                    <span class="icon-5 icon"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>More About This Course</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestiae ad facilis aliquam
+                        veniam possimus omnis, fuga rerum similique illum, enim quia ut cupiditate dolorem quisquam odio
+                        architecto sit quidem!
+                    </p>
+                </div>
+
+                <div class="box-img"><img src="./assits/box img.jpg" alt="Image"></div>
+                <h3> <img src="./assits/deep-learning.png" alt=""> Machine Learning</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatum architecto quo dolor,
+                    nam eaque.
+                </p>
+                <button id="infoBnt5">Know More</button>
+
+            </div>
+
+            <div class="box box-6">
+
+                <div class="overlay">
+                    <span class="icon-6 icon"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>More About This Course</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestiae ad facilis aliquam
+                        veniam possimus omnis, fuga rerum similique illum, enim quia ut cupiditate dolorem quisquam odio
+                        architecto sit quidem!
+                    </p>
+                </div>
+
+                <div class="box-img"><img src="./assits/box img.jpg" alt="Image"></div>
+                <h3> <img src="./assits/deep-learning.png" alt=""> Machine Learning</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatum architecto quo dolor,
+                    nam eaque.
+                </p>
+                <button id="infoBnt6">Know More</button>
+
+            </div>
+
+        </div>
+    </Section>
+
+    <!-- ============================= Teachers Section ================================ -->
+
+    <section id="teacher" data-aos="fade-up">
+        <h5>Teachers</h5>
+        <h3>Our Instructor</h3>
+
+        <div class="slider-container">
+            <div class="slider">
+
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+                <div class="items">
+                    <img src="./assits/teacher.jpg" alt="Teacher">
+                    <h3>Jone Doe</h3>
+                    <h5>php develover</h5>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="control">
+            <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- ========================== Pricing & Package Section ========================= -->
+
+    <section id="pricing" data-aos="fade-up">
+        <h5>Pricing</h5>
+        <h3>Price & Packages</h3>
+        <div class="price-box">
+
+            <div class="box">
+                <h5>BASIC PLAN</h5>
+                <h1> <span>$</span>10k</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aliquam placeat, perferendis
+                    praesentium incidunt repudiandae nihil excepturi atque nemo modi, cum ipsum, est sed similique
+                    pariatur deserunt illum! Dignissimos, inventore?</p>
+                <button class="pricebtn">Buy Now</button>
+            </div>
+
+            <div class="box">
+                <h5>BEGINNER PLAN</h5>
+                <h1> <span>$</span>20k</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aliquam placeat, perferendis
+                    praesentium incidunt repudiandae nihil excepturi atque nemo modi, cum ipsum, est sed similique
+                    pariatur deserunt illum! Dignissimos, inventore?</p>
+                <button class="pricebtn">Buy Now</button>
+            </div>
+
+            <div class="box">
+                <h5>PREMIUM PLAN</h5>
+                <h1> <span>$</span>40k</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aliquam placeat, perferendis
+                    praesentium incidunt repudiandae nihil excepturi atque nemo modi, cum ipsum, est sed similique
+                    pariatur deserunt illum! Dignissimos, inventore?</p>
+                <button class="pricebtn">Buy Now</button>
+            </div>
+
+            <div class="box">
+                <h5>ULTIMATE PLAN</h5>
+                <h1> <span>$</span>100k</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aliquam placeat, perferendis
+                    praesentium incidunt repudiandae nihil excepturi atque nemo modi, cum ipsum, est sed similique
+                    pariatur deserunt illum! Dignissimos, inventore?</p>
+                <button class="pricebtn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== Testimonial Section ============================ -->
+    <section id="testimonial" data-aos="fade-up">
+        <h5>testimonial</h5>
+        <h3>Our Sucsessful Students.!</h3>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="coment">
+                            <p> <span><i class="fa-solid fa-quote-left"></i></span> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Debitis, voluptatem alias molestias nostrum quis natus
+                                earum deleniti nesciunt totam temporibus iste excepturi, eligendi quisquam nulla vel,
+                                culpa molestiae fuga sint eum. Quos, esse voluptate vitae quae, adipisci iste tempore
+                                officia at hic consequatur, obcaecati optio saepe! Itaque hic saepe in!
+                                <span><i class="fa-solid fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="cmnt-img">
+                            <figure>
+                                <img src="./assits/clint.jpg" alt="">
+                            </figure>
+                            <h5>hablu khan</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- ============================== Contact Section ================================ -->
+
+    <section id="contact-form" data-aos="fade-up">
+        <h5>Contact</h5>
+        <h3>Contact With Us</h3>
+        <div class="contact">
+            <div class="left-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15867.40178333826!2d-122.41941570069317!3d37.77492959526732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e5a5a3c7401%3A0xd284f6e7d99e431c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1648783662199!5m2!1sen!2sus"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================== Footer Section ============================= -->
+
+    <footer>
+        <div class="copy">
+            <p>&copy;All Reserved by Dev Prince.</p>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <!-- ============================== Swiper JS CDN ================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- ============================== AOS JS CDN ================================= -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="main.js"></script>
 </body>
