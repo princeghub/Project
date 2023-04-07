@@ -1,0 +1,974 @@
+/*    https://rainbowit.net/html/inbio/index-developer.html      */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #ff014f;
+    --color-secondary: #f4f5f6;
+    --color-tertiary: #0d1013;
+    --color-gray: #f6f6f6;
+    --color-subtitle: #f9004d;
+    --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
+    --background-color-2: #212428;
+    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+    --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+    --shadow-white-3: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
+    --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+    --color-heading: #ffffff;
+    --color-heading-wv: #1e2125;
+    --color-body: #878e99;
+    --color-body-white: #3c3e41;
+    --color-lightn: #c4cfde;
+    --color-midgray: #878787;
+    --color-light: #E4E6EA;
+    --color-lighter: #CED0D4;
+    --color-lightest: #F0F2F5;
+    --color-border: #E6E6E6;
+    --color-white: #ffffff;
+    --color-white-75: rgba(255, 255, 255, 0.75);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    list-style: none;
+    background: var(--background-color-2);
+    color: var(--color-body);
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+.container{
+    max-width: 1270px;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+}
+
+button{
+    border-radius: 6px;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: var(--shadow-1);
+    font-size: 2rem;
+    font-weight: 500;
+    border: 0 none;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    color: var(--color-primary);
+    transition: all .3s ease-in-out;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+
+/* =============== header css code ================= */
+
+.header {
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: var(--background-color-2);
+    width: 100%;
+    z-index: 9999;
+    position: relative;
+}
+.fixd{
+    position: fixed;
+    top: 0;right: 0;
+    width: 100%;
+    background: var(--background-color-2);
+    z-index: 999;
+    transition: all .5s ease-in-out;
+}
+
+
+.header .logo {
+    height: 60px;
+    width: 60px;
+    position: relative;
+
+}
+
+.header .logo a {
+    display: flex;
+    align-items: center;
+    color: var(--color-body);
+    gap: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.header .logo a span {
+    display: inline-block;
+    color: var(--color-body);
+
+}
+
+.header .logo img {
+    border-radius: 50%;
+    display: inline-block;
+}
+
+nav .navBar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 999;
+}
+
+nav .navBar a {
+    color: var(--color-body);
+    font-size: 2rem;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+nav .navBar a:hover {
+    color: var(--color-heading);
+}
+
+nav .navBar .contact {
+    padding: 1rem 2rem;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    color: var(--color-primary);
+    display: inline-block;
+    transition: all .5s ease-in-out;
+}
+
+nav .navBar .contact:hover {
+    box-shadow: var(--shadow-2);
+    color: var(--color-primary);
+    transform: translateY(-5px);
+
+}
+
+.mobile .fa-bars,
+.fa-xmark {
+    color: var(--color-primary);
+    font-size: 3rem;
+}
+
+.mobile {
+    display: none;
+}
+
+@media(max-width:1330px) {
+    html {
+        font-size: 55%;
+    }
+
+    nav .navBar {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        height: 50vh;
+        width: 50vw;
+        background: var(--color-body-white);
+        padding: 3rem 0;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+        overflow: hidden;
+    }
+
+    .active nav .navBar {
+        transform: translateX(0);
+    }
+
+    nav .navBar .contact {
+        padding: 0;
+        background: transparent !important;
+        color: var(--color-body) !important;
+        display: inline-block;
+        box-shadow: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .active .fa-bars {
+        display: none;
+    }
+
+    .fa-xmark {
+        display: none;
+    }
+
+    .active .fa-xmark {
+        display: block;
+    }
+}
+@media(max-width:737px){
+    nav .navBar {
+        height: 100vh;
+    }
+}
+@media(max-width:568px){
+    nav .navBar {
+        height: 50vh;
+    }
+    .header .logo a {
+        font-size: 2rem;
+    }
+}
+
+/* ================= home section css ================= */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 8rem;
+    height: inherit;
+    margin-top: 3rem;
+    position: relative;
+}
+#home::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    max-width: 1270px;
+    margin: 0 auto;
+    background: #000;
+
+}
+
+#home .left-side {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s ease-in-out;
+}
+#home .left-side:hover{
+    transform: translateY(-5px);
+}
+
+#home .left-side .top {
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+    padding: 3.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+#home .left-side .top .uicon{
+    height: 70px;
+    width: 70px;
+    font-size: 3rem;
+    background: var(--color-primary);
+    border-radius: 150px;
+    color: var(--color-gray);
+    display: inline-block;
+    text-align: center;
+    line-height: 70px;
+    animation: play 1s both infinite;
+}
+@keyframes play {
+    0%{
+        box-shadow: 0 0 0 0 #cc0041, 0 0 0 0 #cc0041;
+    }
+    50%{
+        box-shadow: 0 0 0 10px #770328, 0 0 0 10px #cc0041;
+    }
+    100%{
+        box-shadow: 0 0 0 10px #a50034, 0 0 0 10px #a50034;
+    }
+}
+
+#home .left-side .top h1 .name{
+    color: var(--color-primary);
+    position: relative;
+    width: 200px;
+}
+#home .left-side .top h1 .name::after{
+    content: '';
+    position: absolute;
+    left: 0;top: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--background-color-2);
+    border-left: 2px solid var(--color-primary);
+    animation: text 3s steps(12) infinite;
+}
+@keyframes text{
+    100%{
+        left: 270px;
+    }
+}
+#home .left-side .top h1 {
+    font-size: 4rem;
+    line-height: 7rem;
+    color: var(--color-heading);
+}
+
+#home .left-side .top p {
+    font-size: 2rem;
+    color: var(--color-lightn);
+}
+
+#home .left-side .top ul {
+    margin-top: 3rem;
+    padding: 0;
+    color: var(--color-lightn);
+}
+
+#home .left-side .top ul li {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+#home .left-side .top ul li a{
+    color: var(--color-lightn);
+}
+#home .left-side .top ul .icon{
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 0 1rem 0 0;
+}
+
+#home .left-side .bottom {
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    width: 100%;
+    height: 200px;
+    display: inline-block;
+    padding: 3.5rem;
+    border-radius: 1.5rem;
+}
+#home .left-side .bottom h4{
+    font-size: 2rem;
+}
+#home .left-side .bottom a{
+    border-radius: 6px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    color: var(--color-primary); 
+    padding: 1.5rem 2rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border: 0 none;
+    transition: all .5s ease-in-out;
+}
+#home .left-side .bottom a:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-2);
+}
+
+#home .right-side {   
+    cursor: pointer;
+    width: 700px;
+    transition: all .3s ease-in-out;       
+}
+#home .right-side:hover{
+    transform: translateY(-5px);
+}
+#home .right-side .inner-right{
+    padding: 2rem;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+/* ====================== home responcive code ==================== */
+
+@media(max-width:992px){
+    #home{
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+        height: inherit;
+    }
+    #home .left-side {
+        width: 100vw;
+        padding: 0 5rem;       
+    }
+  
+    #home .right-side img{
+        width: 100%;
+        cursor: pointer;
+    }
+}
+@media(max-width:667px){
+    #home .right-side {   
+        width: 90vw;         
+    }
+}
+@media(max-width:684px){
+    #home .right-side {   
+        width: 90vw;         
+    }
+}
+@media(max-width:568px){
+    #home .right-side {   
+        width: 90vw;         
+    }
+    #home .left-side .top h1{
+        font-size: 3rem;
+    }
+}
+
+/* ==================== about me css code =================== */
+#aboutme{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 0;
+    gap: 2rem;
+}
+#aboutme .left-side{
+    width: 50vw;
+}
+#aboutme .left-side .image:hover{
+    transform: translateY(-5px);
+}
+#aboutme .left-side .image{
+    width: 520px;
+    height: auto;
+    padding: 2rem;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    border-radius: 10rem 0 10rem 0;
+    overflow: hidden;
+    border-top: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    transition: all .4s ease-in-out;
+}
+#aboutme .left-side .image img{
+    border-radius: 10rem 0 10rem 0;
+}
+#aboutme .right-side{
+    width: 50vw;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    padding: 5rem 3rem;
+    border-radius: 2rem;
+    transition: all .4s ease-in-out;
+}
+#aboutme .right-side:hover{
+    transform: translateY(-5px);
+}
+#aboutme .right-side h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--color-subtitle);
+}
+#aboutme .right-side p{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+#aboutme .right-side .section{
+    padding: 4rem 0;
+}
+.right-side .social ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin-top: 5rem;
+}
+.right-side .social ul a{
+    font-size: 2rem;
+    padding: 1rem;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-2);
+    color: var(--color-primary);
+    border-radius: 1rem;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+}
+.right-side .social ul a:hover{
+    transform: translateY(-5px);
+}
+#aboutme .right-side #innerBox1{
+    max-width: 700px;
+}
+#aboutme .right-side #innerBox2{
+    display: none;
+}
+#aboutme .right-side #innerBox2 table{
+    border-color: var(--color-primary);
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-heading);
+}
+#aboutme .right-side #innerBox2 table td{
+    color: var(--color-lightn);
+}
+
+@media(max-width:1030px){
+    #aboutme{
+        height: inherit;
+        padding: 3rem 2rem;
+    }
+    #aboutme .left-side .image{
+        width: 100%;
+        
+    }
+}
+@media(max-width:768px){
+    #aboutme{
+        flex-direction: column;
+        padding: 5rem 2rem;
+        gap: 3rem;
+    }
+    #aboutme .left-side{
+        width: 90vw;
+    }
+    #aboutme .right-side{
+        width: 90vw;
+    }
+}
+@media(max-width:568px){
+    html{
+        font-size: 50%;
+    }
+    #innerBox2 table{
+        width: 330px;
+        height: inherit;
+    }
+    #innerBox2 table .sub{
+        display: none;
+    }
+}
+
+/* ================== skills css code ====================== */
+#skills{
+    padding: 5rem 2rem;
+    height: inherit;
+}
+#skills h1{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+#skills .skillbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    gap: 3rem;
+}
+.skillbox .skillSide{
+    width: 50vw;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: all .4s ease-in-out;
+}
+.skillbox .skillSide:hover{
+    transform: translateY(-5px);
+}
+.skillbox .skillSide .inner{
+    position: relative;
+    margin-bottom: 3rem;
+}
+.skillbox .skillSide label{
+    font-size: 2rem;
+    color: var(--color-gray);
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+.skillbox .skillSide .skill{
+    width: 30vw;
+    height: 15px;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    position: relative;
+}
+
+.skillbox .skillSide .html::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 15px;
+    width: 90%;
+    background: var(--gradient-red-hover);
+    animation: proger 3s ease-in-out forwards;
+    opacity: 0;
+}
+.skillbox .skillSide .css::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 15px;
+    width: 85%;
+    background: var(--gradient-red-hover);
+    animation: proger 3s ease-in-out forwards;
+}
+.skillbox .skillSide .bs::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 15px;
+    width: 80%;
+    background: var(--gradient-red-hover);
+    animation: proger 3s ease-in-out forwards;
+}
+.skillbox .skillSide .js::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 15px;
+    width: 50%;
+    background: var(--gradient-red-hover);
+    animation: proger 3s ease-in-out forwards;
+}
+.skillbox .skillSide .jq::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 15px;
+    width: 45%;
+    background: var(--gradient-red-hover);
+    animation: proger 3s ease-in-out forwards;
+}
+.skillbox .skillSide .php::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 15px;
+    width: 40%;
+    background: var(--gradient-red-hover);
+    animation: proger 3s ease-in-out forwards;
+}
+
+@keyframes proger{
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.skillbox .imageSide{
+    width: 50vw;
+    transition: all .4s ease-in-out;
+}
+.skillbox .imageSide:hover{
+    transform: translateY(-5px);
+}
+.skillbox .imageSide .image{
+    padding: 3rem;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    border-radius: 2rem;
+}
+
+/* ================== skill responsive code ================ */
+@media(max-width:768px){
+    #skills .skillbox{
+        flex-direction: column-reverse;
+    }
+    .skillbox .skillSide{
+        width: 90vw;
+    }
+    .skillbox .skillSide .skill{
+        width: 80vw;
+        
+    }
+    .skillbox .imageSide{
+        width: 90vw;
+    }
+}
+
+/* ================== servisec css code ==================== */
+#services{
+    padding: 5rem 2rem;
+    height: inherit;
+}
+#services h1{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--color-primary);
+
+}
+#services .servbox{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    
+}
+.servbox .box{
+    border-left: 5px solid #000;
+    padding: 0 2rem;
+    transition: all .5s ease-in-out;
+}
+.servbox .box .innerbox{
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    height: 300px;
+    max-width: 500px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all .5s ease-in-out;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+.servbox .box .innerbox:hover{
+    background: #212427;
+}
+.servbox .box .innerbox h2{
+    font-size: 2.5rem;
+    color: var(--color-gray);
+}
+.servbox .box .innerbox p{
+    font-size: 2rem;
+}
+.servbox .box .innerbox::after{
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 2rem;
+    height: 5px;
+    width: 28px;
+    background: #000;
+
+}
+.servbox .box .innerbox::before{
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 1.3rem;
+    height: 10px;
+    width: 10px;
+    background: #000;
+    border-radius: 50%;
+    border: 5px solid #000;
+    z-index: 1;
+}
+.servbox .box .innerbox:hover::before{
+    background: var(--color-primary);
+    border-color: #000;
+}
+
+/* ==================== services responsive code ================= */
+@media(max-width:768px){
+    .servbox .box .innerbox{       
+        width: 100vw;
+    }
+    #services{
+        padding: 5rem 4rem;
+    }
+}
+@media(max-width:568px){
+    .servbox .box .innerbox{       
+        width: 80vw;
+    }
+}
+
+
+
+/* ====================== portfolio css code =================== */
+#portfolio{
+    padding: 5rem 2rem;
+    height: inherit;
+}
+#portfolio h1{
+    font-size: 4rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+.portcart{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin-top: 5rem;
+    gap: 3rem;
+}
+.portcart .cart{
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    min-height: 400px;
+    padding: 3rem;
+    transition: all .4s ease-in-out;
+    border-radius: 1rem;
+}
+.portcart .cart:hover{
+    background: #212427;
+    transform: translateY(-5px);
+}
+.portcart .cart .image img{
+    transition: all .5s ease-in-out;
+}
+.portcart .cart .image{
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.portcart .cart .image:hover img{
+    transform: scale(1.1);
+}
+
+.portcart .cart h5{
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    line-height: 5rem;
+}
+.portcart .cart h2{
+    font-size: 2rem;
+    color: var(--color-gray);
+    line-height: 5rem;
+
+}
+.portcart .cart a{
+    color: var(--color-primary);
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 2.5rem;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+}
+.portcart .cart a:hover{
+    transform: translateY(-5px);
+}
+
+/* ==================== portfolio responsive code ================= */
+@media(max-width:376px){
+    .portcart{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+/* =================== contact css code ========================== */
+#contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 2rem;
+}
+.img-side .image{
+    width: 460px;
+    padding: 2rem;
+    background: var(--background-color-2);
+    box-shadow: var(--shadow-1);
+    text-align: center;
+    border-radius: 1rem;
+    transition: all .4s ease-in-out;
+}
+.img-side .image:hover{
+    transform: translateY(-5px);
+}
+.img-side .image h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    display: inline-block;
+    color: var(--color-primary);
+}
+
+.form-side form{
+    background: var(--background-color-2);
+    padding: 2rem;
+    box-shadow: var(--shadow-1);
+    width: 500px;
+    border-radius: 1rem;
+    transition: all .4s ease-in-out;
+}
+.form-side form:hover{
+    transform: translateY(-5px);
+}
+.form-side form label{
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    color: var(--color-primary);
+}
+/* ::placeholder{
+    color: var(--color-primary);
+} */
+.form-side form input{
+    padding-left: 1rem;
+    height: 60px;
+    width: 100%;
+    font-size: 2.5rem;
+    background: var(--background-color-2);
+    outline: none;
+    border: 2px solid #000;
+    margin-top: 2rem;
+    color: var(--color-gray);
+    transition: all .4s ease-in-out;
+}
+.form-side form .msgbox{
+    height: 200px;
+    width: 100%;
+    font-size: 2rem;
+    background: var(--background-color-2);
+    outline: none;
+    border: 2px solid #000;
+    margin-top: 2rem;
+    color: var(--color-gray);
+    padding: 1rem;
+}
+.form-side form .subbtn:hover{
+    background: var(--color-primary);
+
+}
+@media(max-width:1025px){
+    .img-side .image{
+        width: 440px;
+    }
+}
+@media(max-width:768px){
+    #contact{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .img-side .image{
+        width: 90vw;
+    }
+    .form-side form{
+        width: 90vw;        
+    }
+}
+
+/* ================ footer css code ================= */
+footer{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+footer p{
+    line-height: 100px;
+    font-size: 2rem;
+}
