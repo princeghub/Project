@@ -1,0 +1,1067 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* ============ Root Element =============== */
+:root {
+    --Primerry-color: #0eb582;
+    --headding-color: #273C66;
+    --white-color: #ffffff;
+    --bg-color: rgb(240, 253, 250);
+    --bg-color: #f0fdfa;
+    --border-color: #b2eddb;
+    --heading-font: 'Oswald', sans-serif;
+    --genarel-font: 'Poppins', sans-serif;
+}
+
+
+/*  =========== Common CSS ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    background: #eaeaea;
+}
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    background: var(--white-color);
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-family: var(--genarel-font);
+}
+
+/* ============== Coustom CSS ================ */
+/* ============== Top Bar CSS ================ */
+
+.topBar {
+    /* width: 100%; */
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--headding-color);
+    padding: 0 2rem;
+}
+
+.topBar .topLeft {
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+
+.topBar .topLeft strong {
+    font-family: var(--heading-font);
+    color: var(--white-color);
+    width: 100px;
+}
+
+/* .topBar .topCenter{
+    width: 50%;
+} */
+.topBar .topLeft marquee {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-family: var(--genarel-font);
+    text-transform: capitalize;
+}
+
+.topBar .topRight ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* width: 30%; */
+}
+
+.topBar .topRight ul a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.7rem;
+    display: inline-block;
+
+}
+
+/* ============== Nav Bar ============== */
+
+nav {
+    height: 80px;
+    width: 80vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    background: var(--white-color);
+    overflow: hidden;
+    position: relative;
+}
+
+nav .logo {
+    width: 220px;
+    padding-left: 2rem;
+}
+
+.manu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.manu ul a {
+    text-decoration: none;
+    color: var(--headding-color);
+    font-size: 1.8rem;
+    font-family: var(--heading-font);
+    font-weight: 800;
+}
+
+.manu ul .fa-house {
+    color: var(--white-color);
+    font-size: 2rem;
+    background: var(--Primerry-color);
+    padding: 3rem 2rem;
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+.fixd {
+    position: fixed;
+    top: 0;
+    width: 80vw;
+    background: var(--white-color);
+    z-index: 999999;
+
+}
+
+/* ============== Hero Section ============== */
+
+.heroSection {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+}
+
+.heroSection .swiper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.heroSection .swiper .content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.heroSection .swiper .content h1 {
+    font-family: var(--heading-font);
+    color: var(--white-color);
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.heroSection .swiper .content p {
+    color: var(--white-color);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroSection .Hnext::after {
+    color: var(--headding-color);
+    font-size: 3.5rem;
+}
+
+.heroSection .Hpree::after {
+    color: var(--headding-color);
+    font-size: 3.5rem;
+}
+
+.swiper-pagination {
+    color: var(--Primerry-color);
+}
+
+/* ================ About Us =============== */
+
+#aboutUs {
+    background: var(--white-color);
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 2rem;
+}
+
+.aboutUs {
+    width: 72%;
+    display: inline-block;
+    padding: 1rem;
+    background: var(--bg-color);
+    text-align: center;
+    border-right: 2rem solid var(--headding-color);
+}
+
+.aboutUs h3 {
+    font-size: 4rem;
+    background: var(--Primerry-color);
+    color: var(--white-color);
+    line-height: 6rem;
+    font-family: var(--heading-font);
+}
+
+.aboutUs h4 {
+    font-size: 2.5rem;
+    font-family: var(--genarel-font);
+    color: var(--headding-color);
+    text-align: left;
+
+}
+
+.aboutUs p {
+    font-size: 2rem;
+    margin-top: 2rem;
+    line-height: 3rem;
+    text-align: left;
+    font-family: var(--genarel-font);
+}
+
+.aboutUs p a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--genarel-font);
+    background: var(--headding-color);
+    color: var(--white-color);
+    padding: .5rem 1rem;
+
+}
+
+.boardStaf .swiper {
+    height: 100%;
+    cursor: pointer;
+}
+
+.boardStaf {
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    /* border:1px solid var(--border-color); */
+}
+
+.boardStaf .Bnext {
+    margin-right: 3rem;
+}
+
+.boardStaf .Bnext::after {
+    color: #273C66;
+    font-size: 2.5rem;
+
+}
+
+.boardStaf .Bpree {
+    margin-left: 3rem;
+}
+
+.boardStaf .Bpree::after {
+    color: #273C66;
+    font-size: 2.5rem;
+}
+
+/* Slider  */
+/* .acadamic{
+    background: url(./assits/Adit.jpg) no-repeat center;
+    background-size: cover;
+} */
+.boardStaf .imageBox {
+    padding: 1rem;
+}
+
+.boardStaf .imageBox img {
+    width: 190px;
+    border: 2px solid var(--Primerry-color);
+    margin: 1rem 0;
+    margin: 0 auto;
+}
+
+.boardStaf .imageBox h4 {
+    background: var(--Primerry-color);
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+}
+
+.boardStaf .imageBox span {
+    font-size: 1rem;
+}
+
+.boardStaf .imageBox .dep {
+    font-size: 1.5rem;
+}
+
+.moreBtn {
+    z-index: 999;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+}
+
+.moreBtn a {
+    text-decoration: none;
+    color: var(--Primerry-color);
+    font-family: var(--genarel-font);
+    font-size: 2rem;
+
+}
+
+
+/* ================ Depertment CSS =============*/
+.subBox {
+    margin-top: 2rem;
+    background: var(--white-color);
+    padding: 1rem;
+}
+
+.subBox h3 {
+    font-size: 4rem;
+    background: var(--Primerry-color);
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--white-color);
+}
+
+
+
+.showBtn {
+    outline: none;
+    padding: .8rem 2rem;
+    background: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    overflow: hidden;
+    color: var(--Primerry-color);
+    font-family: var(--genarel-font);
+    margin-top: 2rem;
+
+}
+
+.showBtn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--Primerry-color);
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all .3s linear;
+
+}
+
+.showBtn:hover:after {
+    transform: translateX(0);
+
+}
+
+.showBtn:hover {
+    color: var(--white-color);
+}
+
+
+/* ========= PopUp CSS Start======= */
+#depertment {
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+
+}
+
+.alltreade {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.alltreade h1 {
+    font-size: 4rem;
+    background: var(--Primerry-color);
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    text-align: center;
+
+}
+
+.treadeBox {
+    border: 2px solid var(--border-color);
+    background: var(--bg-color);
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.treadeBox h3 {
+    font-size: 3rem;
+    font-family: var(--heading-font);
+}
+
+.treadeBox h3 span {
+    font-size: 1.8rem;
+    line-height: 5rem;
+}
+
+.treadeBox p {
+    font-size: 1.8rem;
+}
+
+.treadeBox .logo {
+    width: 20rem;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.treadeBox .logo img {
+    transition: all .3s ease-in-out;
+}
+
+.treadeBox .logo img:hover {
+    transform: scale(1.2);
+}
+
+.treadeBox:hover {
+    box-shadow: -2px 0px 15px 5px rgba(0, 0, 0, 0.10);
+}
+
+.treadeBox .popupBox {
+    position: absolute;
+    top: 40%;
+    left: 90%;
+    width: 30vw;
+    height: 70vh;
+    text-align: left;
+    background: var(--white-color);
+    padding: 2rem;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+    transform: translate(-50%, -50%) scale(.5);
+    border: 1px solid var(--border-color);
+}
+.treadeBox .popupBox .image{
+    width: 200px;
+}
+.treadeBox .popupBox p{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.tread-3 {
+    position: relative;
+}
+
+.tread-3 .popupBox {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+}
+
+.tread-6 {
+    position: relative;
+}
+
+.tread-6 .popupBox {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+}
+
+.show .popupBox {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.closBtn {
+    display: block;
+    font-size: 3rem;
+    text-align: right;
+    color: var(--headding-color);
+}
+
+.btebBoard span {
+    font-size: 2rem;
+    color: red;
+}
+
+.btebBoard p {
+    font-size: 1.3rem;
+    font-family: var(--genarel-font);
+}
+
+.btebBoard p a {
+    text-decoration: none;
+}
+
+.btebBoard .board {
+    font-size: 1.8rem;
+    font-family: var(--genarel-font);
+}
+
+.aditBtn {
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+/* ========= PopUp CSS End======= */
+
+
+
+
+
+/* ============= Book List CSS ============== */
+.bookList {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.bookList h1 {
+    font-size: 4rem;
+    background: var(--Primerry-color);
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+.BookContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+.semester {
+    background: var(--bg-color);
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.semester h3 {
+    background: var(--headding-color);
+    color: var(--white-color);
+    font-size: 2.5rem;
+    font-family: var(--heading-font);
+    padding-left: 4rem;
+}
+
+.semester ol {
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+.semester ol li {
+    font-size: 2rem;
+}
+
+.semester span {
+    text-align: center;
+    display: block;
+    line-height: 10rem;
+    font-size: 3rem;
+    font-family: var(--genarel-font);
+}
+
+
+/* ================= Maps CSS ============= */
+.mapsContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+
+}
+
+.mapsContainer .imageBox {
+    border: 2rem solid var(--headding-color);
+    height: inherit;
+    width: 30%;
+}
+
+.mainContainer {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.mainContainer h1 {
+    font-size: 4rem;
+    background: var(--Primerry-color);
+    font-family: var(--heading-font);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.mapsContainer .mapBox iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.mapsContainer .mapBox {
+    border: 2rem solid var(--headding-color);
+    background: var(--Primerry-color);
+    width: 63%;
+    height: 27px;
+    min-height: 277px;
+}
+
+
+
+/* ================ Footer =============== */
+.footerContainer {
+    background: var(--headding-color);
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.footerContainer h3 {
+    background: var(--Primerry-color);
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--white-color);
+    padding: 0 1rem;
+}
+
+.footerBox img {
+    width: 200px;
+}
+
+.footerBox ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.footerBox ul a {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-family: var(--genarel-font);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+.Fbtm {
+    background: var(--white-color);
+    text-align: center;
+}
+
+.Fbtm p {
+    font-family: var(--genarel-font);
+    font-size: 1.8rem;
+    color: var(--headding-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+.showbot .botContainer {
+    opacity: 1;
+    bottom: 1rem;
+    transform: scaleY(1);
+}
+
+.botContainer {
+    transform: scaleY(0);
+    bottom: -20rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s linear;
+    background: var(--white-color);
+    width: 30rem;
+    position: fixed;
+    right: 17rem;
+    z-index: 999999;
+    border: 5px solid var(--Primerry-color);
+    height: 500px;
+    box-sizing: border-box;
+}
+
+.botContainer .botLogo {
+    display: block;
+    font-size: 5rem;
+    text-align: center;
+    background: var(--Primerry-color);
+    color: var(--white-color);
+    line-height: 7rem;
+}
+
+.bot {
+    position: relative;
+    height: 100%;
+    width: 93%;
+    padding: 1rem;
+
+}
+
+.user {
+    display: none;
+    opacity: 0;
+}
+
+.showbot .user {
+    position: absolute;
+    bottom: 10rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+#input {
+    width: 220px;
+    display: inline-block;
+    margin-left: 1rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    outline: none;
+    border: 1px solid var(--Primerry-color);
+    padding: .5rem;
+}
+
+#callbtn {
+    font-size: 3rem;
+    padding: .2rem;
+    background: var(--headding-color);
+    color: var(--white-color);
+}
+
+#output {
+    font-size: 1.6rem;
+    background: var(--bg-color);
+    width: 100%;
+}
+
+#botLogo {
+    position: fixed;
+    bottom: 1rem;
+    right: 8rem;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--white-color);
+    background: var(--Primerry-color);
+    cursor: pointer;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================== About US Page Start ========================= */
+.aboutPage {
+    margin: 2rem 0;
+}
+
+.aboutPage #aboutUs {
+    height: inherit;
+    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+.aboutPage .aboutUs {
+    border-right: 3px solid var(--headding-color);
+}
+
+.aboutPage #aboutUs .con {
+    padding: 0;
+    background: transparent;
+    color: var(--headding-color);
+}
+
+.aboutPage #aboutUs .importantLinks {
+    width: 30%;
+    padding: 1rem;
+    background: var(--bg-color);
+}
+
+.aboutPage #aboutUs .importantLinks h3 {
+    font-size: 4rem;
+    background: var(--Primerry-color);
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    display: block;
+}
+
+.aboutPage #aboutUs .importantLinks ul {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.aboutPage #aboutUs .importantLinks ul a {
+    font-size: 2rem;
+    font-family: var(--genarel-font);
+    color: var(--headding-color);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/* ======================== About US Page End ========================= */
+
+
+
+
+.discription {
+    background: var(--white-color);
+    height: inherit;
+    padding: 2rem 0;
+}
+
+.dicBox {
+    display: flex;
+    background: var(--bg-color);
+    border: 2px solid var(--headding-color);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.dicBox .image {
+    width: 150px;
+    border: 1px solid var(--headding-color);
+}
+
+.dicBox .paragraph {
+    padding: 2rem;
+    width: 70%;
+}
+.dicBox .paragraph h3{
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    margin-bottom: 2rem;
+}
+.dicBox .paragraph p{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================ Instractor Of TcT Page ================================ */
+.instractor {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--white-color);
+    height: inherit;
+
+}
+
+.instractor h1 {
+    font-size: 4rem;
+    font-family: var(--heading-font);
+    color: var(--white-color);
+    background: var(--Primerry-color);
+    text-align: center;
+}
+
+.ourInst {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.ourInst .instBox {
+    background: var(--bg-color);
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+}
+
+.ourInst .instBox .imageBox {
+    display: flex;
+    align-items: center;
+    background: var(--headding-color);
+}
+
+.ourInst .instBox .imageBox .image {
+    width: 80px;
+}
+
+.ourInst .instBox .imageBox h3 {
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    padding-left: .5rem;
+}
+
+.ourInst .instBox .content ul {
+    list-style: none;
+}
+
+.ourInst .instBox .content li span {
+    font-size: 2rem;
+    display: inline-block;
+    font-family: var(--heading-font);
+    color: var(--headding-color);
+    margin-right: 1rem;
+}
+
+.ourInst .instBox .content li {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: var(--genarel-font);
+}
+
+/* ================================ Instractor Of TcT Page ================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================Result Page ===================================== */
+.resultBox {
+    height: 100vh;
+    background: var(--bg-color);
+    overflow: hidden;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.resultBox h1 {
+    font-size: 4rem;
+    font-family: var(--heading-font);
+    background: var(--Primerry-color);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.result {
+    height: 91%;
+}
+
+.result iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}

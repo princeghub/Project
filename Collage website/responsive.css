@@ -1,0 +1,20 @@
+@media (max-width:800px){
+    html{
+        font-size: 60%;
+    }
+    .container{
+        width: 90vw;
+    }
+    .aboutUs{
+        width: 60%;
+    }
+    .boardStaf{
+        width: 35%;
+    }
+    .mapsContainer .imageBox{
+        width: 30%;
+    }
+    .mapsContainer .mapBox{
+        width: 60%;
+    }
+}
